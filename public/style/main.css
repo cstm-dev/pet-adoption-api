@@ -82,6 +82,11 @@
   margin-top: -2.5vh;
 }
 
+.github {
+    margin-top: -0.5vh;
+    margin-left: 1vh;
+}
+
 .collage {
   width: 430px;
   height: 70vh;
@@ -113,4 +118,12 @@ svg {
 a {
     text-decoration: inherit;
     color: inherit;
+}
+
+.vh-17-5 {
+    height: 17.5vh;
+}
+
+.divider {
+    border-top: 1px solid grey;
 }

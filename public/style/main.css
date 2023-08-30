@@ -30,6 +30,7 @@
 
 .h2-cstm {
   font-size: 3.052rem;
+  line-height: 86px;
 }
 
 .h3-cstm {
@@ -38,14 +39,14 @@
 }
 
 .cta-cstm {
-    width: 315px;
-    height: 75px;
-    font-size: 1.563rem;
-    font-weight: 700;
-    border: none;
-    border-radius: 50px;
-    text-align: center;
-    margin-top: 50px;
+  width: 315px;
+  height: 75px;
+  font-size: 1.563rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 50px;
+  text-align: center;
+  margin-top: 50px;
 }
 
 .p-cstm {
@@ -70,20 +71,46 @@
 }
 
 .logo-hero {
-    width: 260px;
+  width: 260px;
 }
 
 .logo-footer {
-    width: 360px;
+  width: 360px;
+}
+
+.paw {
+  margin-top: -2.5vh;
 }
 
 .collage {
-    width: 430px;
-    height: 70vh;
-    background-color: white;
-    margin-top: 140px;
+  width: 430px;
+  height: 70vh;
+  background-color: white;
+  margin-top: 140px;
+  z-index: 1;
 }
 
 .collage-img {
-    width: 390px;
+  width: 390px;
+}
+
+svg {
+  position: absolute;
+  transform: scale(-1);
+  margin-top: -10vh;
+}
+
+.profile-img {
+    width: 400px;
+    border: 10px white solid;
+    border-radius: 25px;
+}
+
+.inactive-img {
+    filter: grayscale(100%);
+}
+
+a {
+    text-decoration: inherit;
+    color: inherit;
 }

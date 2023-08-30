@@ -1,31 +1,37 @@
 <div id="pet-details" class="vh-100 bg-dark-blue">
-  <div class="container mt-5 pt-5">
+  <div class="container pt-5">
     <div class="row pt-5">
       <div class="col-12 pt-5">
-        <!-- TODO Add name -->
         <h2 class="h2-cstm fc-yellow font-pacifico pt-5">
           Hello
           <img class="icon-64 paw" src="./images/pawprint.png" alt="" />
-          ,<br />I'm Nebula and I'm looking for a new home.
+          ,<br />I'm <% if (locals.petData) { %>
+          <%= petData.name %>
+          <% } %> and I'm looking for a new home.
         </h2>
       </div>
     </div>
     <div class="row my-5">
       <!-- TODO Add carousel -->
       <div class="col-5">
-        <img class="profile-img" src="./images/placeholder.jpg" alt="pet profile pictures" />
+        <% if (locals.petData && locals.petData.photos.length > 0) { %>
+        <img class="profile-img" src="<%= petData.photos[0].medium %>" alt="pet profile pictures" />
+        <% } %>
       </div>
       <div class="col-7">
-        <!-- TODO Add forEach -->
-        <div class="row">
-          <h3 class="col h3-cstm fc-yellow font-josefin">Age</h3>
-          <p class="col p-cstm fc-white font-josefin">Young</p>
+        <% if (locals.petDetails) { %>
+        <% for( let key in petDetails ) { %>
+        <div class="row pb-2">
+          <h3 class="col h3-cstm fc-yellow font-josefin"><%= key %></h3>
+          <p class="col p-cstm fc-white font-josefin"><%= petDetails[key] %></p>
         </div>
+        <% } %>
+        <% } %>
         <div class="row">
-          <!-- TODO Add description -->
-          <p class="p-cstm fc-white font-josefin">
-            Nebula is a shorthaired, shy dog. He is very affecionate once he
-            warms up to you.
+          <p class="p-cstm fc-white font-josefin pt-5">
+            <% if (locals.petData) { %>
+            <%= petData.description %>
+            <% } %>
           </p>
         </div>
       </div>
@@ -33,22 +39,32 @@
     <div class="row pt-5 justify-content-between">
       <div class="col-4 text-center">
         <h3 class="h3-cstm fc-yellow font-josefin mb-4">Good with</h3>
-        <!-- TODO Add inactive -->
+        <% if (locals.petData && locals.petData.environment.dogs) { %>
+        <img class="icon-64 mx-3" src="./images/dog.png" alt="dog icon" />
+        <% } else { %>
         <img class="icon-64 mx-3 inactive-img" src="./images/dog.png" alt="dog icon" />
+        <% } %>
+        <% if (locals.petData && locals.petData.environment.dogs) { %>
         <img class="icon-64 mx-3" src="./images/cat.png" alt="cat icon" />
+        <% } else { %>
+        <img class="icon-64 mx-3 inactive-img" src="./images/cat.png" alt="cat icon" />
+        <% } %>
+        <% if (locals.petData && locals.petData.environment.dogs) { %>
         <img class="icon-64 mx-3" src="./images/baby-boy.png" alt="baby icon" />
+        <% } else { %>
+        <img class="icon-64 mx-3 inactive-img" src="./images/baby-boy.png" alt="baby icon" />
+        <% } %>
       </div>
       <div class="col-7">
         <div class="row">
-          <!-- TODO Add contact info -->
           <h3 class="col h3-cstm fc-yellow font-josefin mb-4">CONTACT</h3>
           <div class="col">
-            <p class="p-cstm fc-white font-josefin">
-              petfindertechsupport@gmail.com
-            </p>
-            <p class="p-cstm fc-white font-josefin">555-555-5555</p>
-            <p class="p-cstm fc-white font-josefin">NJ, Jersey City</p>
-            <p class="p-cstm fc-white font-josefin">US, 07097</p>
+            <% if (locals.petData) { %>
+            <p class="p-cstm fc-white font-josefin"><%= petData.contact.email %></p>
+            <p class="p-cstm fc-white font-josefin"><%= petData.contact.phone %></p>
+            <p class="p-cstm fc-white font-josefin"><%= petData.contact.state %>, <%= petData.contact.city %></p>
+            <p class="p-cstm fc-white font-josefin"><%= petData.contact.country %>, <%= petData.contact.postcode %></p>
+            <% } %>
           </div>
         </div>
       </div>

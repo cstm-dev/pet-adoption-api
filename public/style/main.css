@@ -1,0 +1,89 @@
+.bg-light-blue {
+  background-color: #01a5ae;
+}
+
+.bg-dark-blue {
+  background-color: #3c4065;
+}
+
+.fc-white {
+  color: white;
+}
+
+.fc-yellow {
+  color: #f2c039;
+}
+
+.font-pacifico {
+  font-family: "Pacifico", cursive;
+}
+
+.font-josefin {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.h1-cstm {
+  font-size: 4.768rem;
+  margin-top: 300px;
+  line-height: 130px;
+}
+
+.h2-cstm {
+  font-size: 3.052rem;
+}
+
+.h3-cstm {
+  font-size: 1.953rem;
+  font-weight: 400;
+}
+
+.cta-cstm {
+    width: 315px;
+    height: 75px;
+    font-size: 1.563rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 50px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.p-cstm {
+  font-size: 1.563rem;
+  font-weight: 300;
+  line-height: 30px;
+}
+
+.footer-cstm {
+  font-size: 1.25rem;
+  font-weight: 100;
+}
+
+.icon-64 {
+  height: 64px;
+  width: 64px;
+}
+
+.icon-32 {
+  height: 32px;
+  width: 32px;
+}
+
+.logo-hero {
+    width: 260px;
+}
+
+.logo-footer {
+    width: 360px;
+}
+
+.collage {
+    width: 430px;
+    height: 70vh;
+    background-color: white;
+    margin-top: 140px;
+}
+
+.collage-img {
+    width: 390px;
+}
